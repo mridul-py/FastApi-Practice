@@ -5,7 +5,7 @@ from typing import List, Dict, Optional, Annotated
 ''' pip install "pydantic[email]" '''
 ''' Annotated is used to attach meta data with field '''
 ''' field validator operates in 2 modes before( to recieve value thats before type coersion) and after mode ( to recieve value after type coersion)'''
-
+# computed_field is used to calculate any required field in data like bmi using height and weight.
 ''' Model Validator is used combine multiple fields into one and then do validation'''
 class Patient(BaseModel):
     name: Annotated[str, Field(max_length=50)]
